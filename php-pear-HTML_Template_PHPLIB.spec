@@ -6,13 +6,12 @@
 Summary:	%{_pearname} - preg_* based template system
 Summary(pl):	%{_pearname} - system szablonów bazowany na preg_*
 Name:		php-pear-%{_pearname}
-Version:	1.2
+Version:	1.3
 Release:	1
-License:	PHP 2.02
+License:	LGPL
 Group:		Development/Languages/PHP
-# Source0-md5:	353a42a0086be45bb71c6087f3b4da3f
+# Source0-md5:	c60b182cd838e811a433e22f95905122
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-Patch0:		%{name}-cosmetic.patch
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -31,8 +30,6 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
-cd %{_pearname}-%{version}
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
