@@ -7,7 +7,7 @@ Summary:	%{_pearname} - preg_* based template system
 Summary(pl):	%{_pearname} - system szablonów bazowany na preg_*
 Name:		php-pear-%{_pearname}
 Version:	1.3.1
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
