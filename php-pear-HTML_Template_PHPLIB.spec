@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - preg_* based template system
 Summary(pl.UTF-8):	%{_pearname} - system szablon√≥w bazowany na preg_*
 Name:		php-pear-%{_pearname}
-Version:	1.3.1
-Release:	4
+Version:	1.3.3
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	eb44701e8e423a79c695116eb966ca4d
+# Source0-md5:	9e415db896569c5542c7d15b5926551d
 URL:		http://pear.php.net/package/HTML_Template_PHPLIB/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -21,14 +21,34 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The popular Template system from PHPLIB ported to PEAR.
+The popular Template system from PHPLIB ported to PEAR. It has some
+features that can't be found currently in the original version like
+fallback paths. It has minor improvements and cleanup in the code as
+well as some speed improvements.
 
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
-Popularny system szablon√≥w dla PHPLIB, sportowane do PEAR-a.
+Popularny system szablon√≥w dla PHPLIB, sportowane do PEAR-a. Posiada
+kilka dodatkowych cech w stosunku do oryginalnego wersji takie jak
+domy∂lne ∂cieøki. Dokonano takøe drobnych poprawek w kodzie
+dotycz±cych czyszczenia kodu jak i wydajno∂ci.
 
 Ta klasa ma w PEAR status: %{_status}.
+
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
+Group:		Development/Languages/PHP
+Requires:	%{name} = %{version}-%{release}
+AutoReq:	no
+AutoProv:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl.UTF-8
+Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -46,3 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
