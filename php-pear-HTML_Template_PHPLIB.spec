@@ -4,7 +4,7 @@
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}_PHPLIB
 Summary:	%{_pearname} - preg_* based template system
-Summary(pl.UTF-8):	%{_pearname} - system szablonów bazowany na preg_*
+Summary(pl.UTF-8):	%{_pearname} - system szablonĂłw bazowany na preg_*
 Name:		php-pear-%{_pearname}
 Version:	1.3.3
 Release:	1
@@ -29,10 +29,10 @@ well as some speed improvements.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
-Popularny system szablonów dla PHPLIB, sportowane do PEAR-a. Posiada
+Popularny system szablonĂłw dla PHPLIB, sportowane do PEAR-a. Posiada
 kilka dodatkowych cech w stosunku do oryginalnego wersji takie jak
-domy�lne �cie�ki. Dokonano tak�e drobnych poprawek w kodzie
-dotycz�cych czyszczenia kodu jak i wydajno�ci.
+domyślne ścieżki. Dokonano także drobnych poprawek w kodzie
+dotyczących czyszczenia kodu jak i wydajności.
 
 Ta klasa ma w PEAR status: %{_status}.
 
