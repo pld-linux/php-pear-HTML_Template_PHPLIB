@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - preg_* based template system
 Summary(pl.UTF-8):	%{_pearname} - system szablonĂłw bazowany na preg_*
 Name:		php-pear-%{_pearname}
-Version:	1.4.0
+Version:	1.5.0
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	ffaec612100e05e989d859cea7a00bb2
+# Source0-md5:	b06df973f849d4ed7d4369f4d7a7bc0a
 URL:		http://pear.php.net/package/HTML_Template_PHPLIB/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -41,8 +41,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
