@@ -1,17 +1,15 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		HTML
-%define		_subclass	Template
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}_PHPLIB
+%define		_pearname	HTML_Template_PHPLIB
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - preg_* based template system
 Summary(pl.UTF-8):	%{_pearname} - system szablonĂłw bazowany na preg_*
 Name:		php-pear-%{_pearname}
-Version:	1.5.0
-Release:	2
+Version:	1.5.1
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	b06df973f849d4ed7d4369f4d7a7bc0a
+# Source0-md5:	b98d718a3b4185583458c583b7d13e5d
 URL:		http://pear.php.net/package/HTML_Template_PHPLIB/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -52,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/%{_subclass}/*
+%{php_pear_dir}/HTML/Template/*
