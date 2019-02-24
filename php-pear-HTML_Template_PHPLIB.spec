@@ -4,12 +4,12 @@
 Summary:	%{pearname} - preg_* based template system
 Summary(pl.UTF-8):	%{pearname} - system szablonĂłw bazowany na preg_*
 Name:		php-pear-%{pearname}
-Version:	1.5.2
+Version:	1.6.0
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	8acbb63d8e11d1331bcc6e6a37124d6c
+# Source0-md5:	3aea322a34ca3a52c362c16440307b78
 URL:		http://pear.php.net/package/HTML_Template_PHPLIB/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -38,7 +38,7 @@ Ta klasa ma w PEAR status: %{status}.
 %prep
 %pear_package_setup
 
-mv .%{php_pear_dir}/data/HTML_Template_PHPLIB/README .
+mv docs/HTML_Template_PHPLIB/README.rst .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc README.rst
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/HTML/Template/PHPLIB.php
