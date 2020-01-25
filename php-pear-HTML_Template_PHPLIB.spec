@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	HTML_Template_PHPLIB
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - preg_* based template system
 Summary(pl.UTF-8):	%{pearname} - system szablonĂłw bazowany na preg_*
 Name:		php-pear-%{pearname}
